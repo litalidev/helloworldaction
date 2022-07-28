@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: list
-      run:  dir/s/a
+      run:  cmd/c "dir /s /a"

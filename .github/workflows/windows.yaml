@@ -1,9 +1,8 @@
-name: GitHub Actions Demo
+name: GitHub Actions Windows
 on: [push]
 jobs:
   windows:
-    name: windows
-    run-on: windows-latest
+    run-on: windows-2022
     steps:
     - uses: actions/checkout@v3
     - name: list

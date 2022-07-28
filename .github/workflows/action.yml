@@ -16,3 +16,13 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: compile
+      run:  gcc -c hwa.c
+    - name: make
+      run:  gcc hwa.o -o hwa
+    - name: test
+      run:  ./hwa

@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+on: [fork]
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: compile
+      run:  gcc -c hwa.c
+    - name: make
+      run:  gcc hwa.o -o hwa
+    - name: list
+      run: ls -laFR
+    - name: test
+      run:  ./hwa
+    - name: artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: hwa executable
+        path: hwa
+        retention-days: 1

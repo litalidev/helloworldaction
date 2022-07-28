@@ -1,0 +1,10 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  windows:
+    name: windows
+    run-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: list
+      run:  dir/s/a

@@ -6,4 +6,16 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: list
-      run:  cmd /c "dir /s /a"
+      run:  cmd /c "dir /a"
+    - name: compile
+      run:  cl hwa.c
+    - name: check output
+      run:  cmd /c "dir /a"
+    - name: test
+      run:  hwa.exe
+    - name: artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: hwa-windows
+        path: hwa
+        retention-days: 1

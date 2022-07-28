@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-on: [push]
+on: [fork]
 jobs:
   ubuntu:
     runs-on: ubuntu-latest

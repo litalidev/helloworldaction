@@ -1,8 +1,8 @@
 name: GitHub Actions Windows
-on: [fork]
+on: [push]
 jobs:
-  build:
-    run-on: windows-2022
+  windows:
+    runs-on: windows-2022
     steps:
     - uses: actions/checkout@v3
     - name: list

@@ -1,2 +1,4 @@
 # helloworldaction
-test github action c/c++
+test github action with c/c++ source
+- Windows: visual studio
+- Linux: gcc

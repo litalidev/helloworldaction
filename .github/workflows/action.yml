@@ -24,5 +24,12 @@ jobs:
       run:  gcc -c hwa.c
     - name: make
       run:  gcc hwa.o -o hwa
+    - name: list
+      run: ls -laFR
     - name: test
       run:  ./hwa
+    - name: artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: hwa executable
+        path: hwa
